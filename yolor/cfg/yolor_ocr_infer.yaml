@@ -1,0 +1,12 @@
+data_dir: /data/public_test/prescription/image
+output_file: /data/ocr_results.json
+weights: /data/weights/yolor_text_det.pt
+device: cuda
+imgsz: 1280
+auto_size: 64
+conf_thres: 0.1
+agnostic_nms: True
+augment: False
+iou_thres: 0.45
+cfg: cfg/yolor_p6.cfg
+classes: ~

@@ -1,0 +1,13 @@
+data_dir: /data/public_test/prescription/image
+output_file: /data/ocr_results.json
+weights: /data/weights/yolov7_text_det.pt
+device: cuda
+imgsz: 1280
+auto_size: 64
+conf_thres: 0.15
+agnostic_nms: True
+augment: False
+iou_thres: 0.45
+cfg: cfg/yolov7-w6-text-det.cfg
+classes: ~
+half: False

@@ -1,0 +1,40 @@
+project_name: VAIPE
+exp_name: Fine-Grained-VAIPE-Infer
+use_wandb: True
+wandb_entity: poyung
+train_root: ~
+val_root: /data/det_cropped/
+data_size: 384
+num_workers: 12
+batch_size: 8
+model_name: swin-t-v2
+pretrained: /data/weights/fgvc-pim-swinv2.pt
+csv: /data/pill_det_results.csv
+save_name: /output/_results.csv
+path_map_name2cls: /workdir/FGVC-PIM/name_to_cls.json
+ocr: /data/ocr_results.json
+pill_pres_map: /data/public_test/pill_pres_map.json
+use_mapping: False
+optimizer: SGD
+max_lr: 0.0005
+wdecay: 0.0005
+max_epochs: 50
+warmup_batchs: 800
+use_amp: True
+use_fpn: True
+fpn_size: 1536
+use_selection: True
+num_classes: 107
+num_selects:
+  layer1: 2048
+  layer2: 512
+  layer3: 128
+  layer4: 32
+use_combiner: True
+lambda_b: 0.5
+lambda_s: 0.0
+lambda_n: 5.0
+lambda_c: 1.0
+update_freq: 2
+log_freq: 100
+eval_freq: 10

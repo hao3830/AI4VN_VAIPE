@@ -1,0 +1,7 @@
+train: <your_txt_train_path>
+val: <your_txt_val_pathh>
+
+nc: 1
+
+# class names
+names: ['pill']

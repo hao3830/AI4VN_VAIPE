@@ -1,0 +1,10 @@
+# theses txt files contain path to image in images folder of YOLO format
+train: ./dataset/TextDetect/train.txt
+val: ./dataset/TextDetect/val.txt
+test: ./dataset/TextDetect/test.txt
+
+# number of classes
+nc: 1
+
+# class names
+names: ["text"]
